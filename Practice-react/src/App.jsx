@@ -18,7 +18,9 @@ function App() {
         <div className="config-option">
           <h4>No of Questions</h4>
           <div>
-
+            <QuestionOption>5</QuestionOption>
+            <QuestionOption>10</QuestionOption>
+            <QuestionOption>15</QuestionOption>
           </div>
 
         </div>
