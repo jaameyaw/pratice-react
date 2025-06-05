@@ -1,6 +1,11 @@
 import './App.css'
 
 
+function QuestionOption ({children}) {
+  return (
+    <button className="question-btn">{children}</button>
+  )
+}
 
 function App() {
 
