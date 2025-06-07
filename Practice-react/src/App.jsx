@@ -23,9 +23,16 @@ function AnswerOption ({children}) {
 
 
 function App() {
+  const [buttonContent, setbuttonContent] = useState()
+  const [selectedQuestion, setselectedQuestions] = useState([])
   const [isClicked, setisClicked] = useState(false)
   const [count, setcount] = useState(0)
 
+  function buttonClicked (buttonNumber) {
+    setbuttonContent(buttonNumber)
+    const slicedQuestions = Questions.slice(0, buttonNumber);
+    setselectedQuestions(slicedQuestions)
+  }
   function configButtonHandler () {
    setisClicked(true)
   }
