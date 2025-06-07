@@ -7,6 +7,19 @@ function QuestionOption ({children}) {
   )
 }
 
+function Title ({titleName}) {
+  return (
+    <h2>{titleName}</h2>
+  )
+}
+
+function AnswerOption ({children}) {
+  return (
+    <li className='answer-option'><p>{children}</p></li>
+  )
+}
+
+
 function App() {
 
 
