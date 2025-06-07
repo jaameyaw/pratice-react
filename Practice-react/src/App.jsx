@@ -71,10 +71,12 @@ function App() {
           <h1>{count + 1}. {selectedQuestion[count].question}</h1>
 
           <ul className="answer-options">
-            <AnswerOption>{selectedQuestion[count].options[0]}</AnswerOption>
-            <AnswerOption>{selectedQuestion[count].options[1]}</AnswerOption>  
-            <AnswerOption>{selectedQuestion[count].options[2]}</AnswerOption>
-            <AnswerOption>{selectedQuestion[count].options[3]}</AnswerOption>
+            {selectedQuestion[count].options.map(
+              (option, index) => (
+               <AnswerOption key={index}>{option}</AnswerOption> 
+              )
+            )}
+
           </ul>
         </div>
 
