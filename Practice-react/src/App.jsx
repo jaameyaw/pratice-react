@@ -21,7 +21,11 @@ function AnswerOption ({children}) {
 
 
 function App() {
+  const [isClicked, setisClicked] = useState(false)
 
+  function configButtonHandler () {
+   setisClicked(true)
+  }
 
   return (
     <>
@@ -39,6 +43,9 @@ function App() {
         </div>
         
 
+        <div className="start-quiz-wrapper">
+          <button onClick={configButtonHandler} aria-label="Start the quiz">Start Quiz</button>
+        </div>
       </div>
     </>
   )
