@@ -33,6 +33,7 @@ function App() {
     const slicedQuestions = Questions.slice(0, buttonNumber);
     setselectedQuestions(slicedQuestions)
   }
+
   function configButtonHandler () {
    setisClicked(true)
   }
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <>
+      {!isClicked?
       <div className="config-container">
         <Title titleName= 'How well do you know me?' />
 
