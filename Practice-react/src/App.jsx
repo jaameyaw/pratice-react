@@ -1,7 +1,7 @@
 import './App.css'
 
 
-function QuestionOption ({children}) {
+function QuestionOption ({children, onselect, isSelected}) {
   return (
     <button className= {isSelected? 'active' : null}  onClick={onselect}>{children}</button>
   )
