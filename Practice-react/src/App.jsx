@@ -3,7 +3,7 @@ import './App.css'
 
 function QuestionOption ({children}) {
   return (
-    <button className="question-btn">{children}</button>
+    <button className= {isSelected? 'active' : null}  onClick={onselect}>{children}</button>
   )
 }
 
@@ -35,13 +35,11 @@ function App() {
         <div className="config-option">
           <h4>No of Questions</h4>
           <div>
-            <QuestionOption>5</QuestionOption>
-            <QuestionOption>10</QuestionOption>
-            <QuestionOption>15</QuestionOption>
+            <QuestionOption isSelected={buttonContent === 5} onselect={() => buttonClicked(5)}>5</QuestionOption>
+            <QuestionOption isSelected={buttonContent === 10} onselect={() => buttonClicked(10)}>10</QuestionOption>
+            <QuestionOption isSelected={buttonContent === 15} onselect={() => buttonClicked(15)}> 15</QuestionOption>
           </div>
-
         </div>
-        
 
         <div className="start-quiz-wrapper">
           <button onClick={configButtonHandler} aria-label="Start the quiz">Start Quiz</button>
