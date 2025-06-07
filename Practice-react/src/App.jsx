@@ -22,9 +22,14 @@ function AnswerOption ({children}) {
 
 function App() {
   const [isClicked, setisClicked] = useState(false)
+  const [count, setcount] = useState(0)
 
   function configButtonHandler () {
    setisClicked(true)
+  }
+
+  function changeQuestion () {
+    setcount(count + 1)
   }
 
   return (
@@ -45,6 +50,31 @@ function App() {
           <button onClick={configButtonHandler} aria-label="Start the quiz">Start Quiz</button>
         </div>
       </div>
+
+      :<div className="quiz-container">
+        <header className="quiz-header">
+          <Title titleName= 'Quiz Application' />
+        </header>
+
+        <div className="quiz-content">
+          <h1>{count + 1}. {selectedQuestion[count].question}</h1>
+
+          <ul className="answer-options">
+            <AnswerOption>{selectedQuestion[count].options[0]}</AnswerOption>
+            <AnswerOption>{selectedQuestion[count].options[1]}</AnswerOption>  
+            <AnswerOption>{selectedQuestion[count].options[2]}</AnswerOption>
+            <AnswerOption>{selectedQuestion[count].options[3]}</AnswerOption>
+          </ul>
+        </div>
+
+        <div className="quiz-footer">
+          <p className="question-status"><b>{count + 1}</b> of <b>{selectedQuestion.length}</b> Questions</p>
+
+          <div className="nextButton">
+            <button onClick={changeQuestion}>Next</button>
+          </div>
+        </div>
+      </div>}
     </>
   )
 }
