@@ -40,7 +40,13 @@ function App() {
   }
 
   function changeQuestion () {
-    setcount(count + 1)
+
+    const nextQuestionIndex = count + 1;
+    if (nextQuestionIndex >= selectedQuestion.length) {
+      setIsQuizOver(true)
+    } else {
+      setcount(nextQuestionIndex)
+    }
   }
 
   return (
