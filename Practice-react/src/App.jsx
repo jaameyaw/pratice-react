@@ -52,8 +52,8 @@ function App() {
 
   return (
     <>
-      {!isClicked?
-      <div className="config-container">
+      {!isClicked &&
+      (<div className="config-container">
         <Title titleName= 'How well do you know me?' />
 
         <div className="config-option">
@@ -68,9 +68,10 @@ function App() {
         <div className="start-quiz-wrapper">
           <button onClick={configButtonHandler} aria-label="Start the quiz">Start Quiz</button>
         </div>
-      </div>
+      </div>)}
 
-      :<div className="quiz-container">
+      {isClicked && !isQuizOver &&
+      (<div className="quiz-container fade-in">
         <header className="quiz-header">
           <Title titleName= 'Quiz Application' />
         </header>
@@ -98,6 +99,7 @@ function App() {
       </div>)}
 
 
+      {isQuizOver && 
       (<div className="result-container fade-in">
           <img src={QuizOver} alt="congratulations emoji" className="result-img"/>
           <Title titleName='Quiz Completed!' />
