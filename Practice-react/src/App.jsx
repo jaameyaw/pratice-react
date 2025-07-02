@@ -27,6 +27,7 @@ function App() {
   const [buttonContent, setbuttonContent] = useState()
   const [selectedQuestion, setselectedQuestions] = useState([])
   const [isClicked, setisClicked] = useState(false)
+  const [isQuizOver, setIsQuizOver] = useState(false)
   const [count, setcount] = useState(0)
 
   function buttonClicked (buttonNumber) {
