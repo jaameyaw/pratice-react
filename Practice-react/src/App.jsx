@@ -87,7 +87,15 @@ function App() {
             <button onClick={changeQuestion}>Next</button>
           </div>
         </div>
-      </div>}
+      </div>)}
+
+
+      (<div className="result-container fade-in">
+          <img src={QuizOver} alt="congratulations emoji" className="result-img"/>
+          <Title titleName='Quiz Completed!' />
+          <p className="result-message"><b>3</b> out of <b>5</b></p>
+          <button className="try-again-btn" >Try Again</button>
+      </div>)}
     </>
   )
 }
