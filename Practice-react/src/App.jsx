@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react';
 import { Questions } from './questions';
+import QuizOver from '/src/assets/quiz-over.png';
 
 
 function QuestionOption ({children, isSelected, ...rest}) {
