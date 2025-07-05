@@ -76,4 +76,17 @@ export const Questions = [
     options: ["Hang out with friends", "Stay home and code", "Watch movies", "Go for a walk"],
     answer: "Stay home and code"
   }
-]
+]]
+
+function fisherYatesShuffle(questionsArr) {
+
+  for (let i = questionsArr.length - 1; i > 0; i--) {
+
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [questionsArr[i], questionsArr[j]] = [questionsArr[j], questionsArr[i]];    
+  }
+}
+
+fisherYatesShuffle(Questions);
+
