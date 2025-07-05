@@ -1,6 +1,6 @@
 'strict mode';
 
-export const Questions = [
+const Questions = [
   {
     question: "What time of day am I most productive?",
     options: ["Early Morning", "Afternoon", "Evening", "Midnight"],
@@ -76,7 +76,7 @@ export const Questions = [
     options: ["Hang out with friends", "Stay home and code", "Watch movies", "Go for a walk"],
     answer: "Stay home and code"
   }
-]]
+]
 
 function fisherYatesShuffle(questionsArr) {
 
@@ -89,4 +89,6 @@ function fisherYatesShuffle(questionsArr) {
 }
 
 fisherYatesShuffle(Questions);
+
+export { Questions };
 
