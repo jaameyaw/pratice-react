@@ -31,6 +31,8 @@ function App() {
   const [isClicked, setisClicked] = useState(false)
   const [isQuizOver, setIsQuizOver] = useState(false)
   const [count, setcount] = useState(0)
+  const [selectedAnswer, setSelectedAnswer] = useState(null); 
+  const [isAnswered, setIsAnswered] = useState(false); 
 
   function buttonClicked (buttonNumber) {
     setbuttonContent(buttonNumber)
@@ -49,9 +51,24 @@ function App() {
       setIsQuizOver(true)
     } else {
       setcount(nextQuestionIndex)
+      setSelectedAnswer(null);
+      setIsAnswered(false);
     }
   }
 
+  function handleAnswerClick(option) {
+    if (isAnswered) return;
+
+    setSelectedAnswer(option);
+    setIsAnswered(true);
+    setAnswerCount(prevCount => {
+      if (option === selectedQuestion[count].answer) {
+        return prevCount + 1;
+      }
+      return prevCount;
+    }
+    );
+  }
   return (
     <>
       {!isClicked &&
