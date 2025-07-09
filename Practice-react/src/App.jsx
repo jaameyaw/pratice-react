@@ -19,7 +19,7 @@ function Title ({titleName}) {
   )
 }
 
-function AnswerOption ({children}) {
+function AnswerOption ({children, className, onClick, style}) {
   return (
     <li className='answer-option'><p>{children}</p></li>
   )
