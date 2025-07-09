@@ -120,9 +120,17 @@ function App() {
 
           <ul className="answer-options">
             {selectedQuestion[count].options.map(
-              (option, index) => (
-               <AnswerOption key={index}>{option}</AnswerOption> 
-              )
+              (option, index) => {
+                let className = '';
+                if (isAnswered) {
+                  if (option === selectedQuestion[count].answer) {
+                    className = 'correct'; 
+                  }
+                  else if (option === selectedAnswer) {
+                    className = 'incorrect';
+                  }
+                }
+
             )}
 
           </ul>
