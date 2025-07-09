@@ -29,7 +29,6 @@ function AnswerOption ({children, className, onClick, style}) {
 
 
 
-
 function App() {
   const [buttonContent, setbuttonContent] = useState()
   const [selectedQuestion, setselectedQuestions] = useState([])
