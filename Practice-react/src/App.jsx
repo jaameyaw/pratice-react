@@ -161,6 +161,7 @@ function App() {
           <img src={QuizOver} alt="congratulations emoji" className="result-img"/>
           <Title titleName='Quiz Completed!' />
           <p className="result-message"><b>{answerCount}</b> out of <b>{selectedQuestion.length}</b></p>
+          <button onClick={resetQuiz} className="try-again-btn" >Try Again</button>
       </div>)}
     </>
   )
