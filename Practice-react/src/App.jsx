@@ -1,8 +1,11 @@
 import './App.css'
 import { useState } from 'react';
 import { Questions } from './questions';
+import { fisherYatesShuffle } from './questions';
 import QuizOver from '/src/assets/quiz-over.png';
 
+
+fisherYatesShuffle(Questions);
 
 function QuestionOption ({children, isSelected, ...rest}) {
   return (
