@@ -78,7 +78,7 @@ const Questions = [
   }
 ]
 
-function fisherYatesShuffle(questionsArr) {
+export function fisherYatesShuffle(questionsArr) {
 
   for (let i = questionsArr.length - 1; i > 0; i--) {
 
@@ -88,7 +88,6 @@ function fisherYatesShuffle(questionsArr) {
   }
 }
 
-fisherYatesShuffle(Questions);
 
 export { Questions };
 
