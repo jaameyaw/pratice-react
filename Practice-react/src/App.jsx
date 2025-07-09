@@ -36,6 +36,7 @@ function App() {
   const [isClicked, setisClicked] = useState(false)
   const [isQuizOver, setIsQuizOver] = useState(false)
   const [count, setcount] = useState(0)
+  const [answerCount, setAnswerCount] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState(null); 
   const [isAnswered, setIsAnswered] = useState(false); 
 
@@ -159,8 +160,7 @@ function App() {
       (<div className="result-container fade-in">
           <img src={QuizOver} alt="congratulations emoji" className="result-img"/>
           <Title titleName='Quiz Completed!' />
-          <p className="result-message"><b>3</b> out of <b>5</b></p>
-          <button className="try-again-btn" >Try Again</button>
+          <p className="result-message"><b>{answerCount}</b> out of <b>{selectedQuestion.length}</b></p>
       </div>)}
     </>
   )
