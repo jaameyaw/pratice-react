@@ -21,7 +21,9 @@ function Title ({titleName}) {
 
 function AnswerOption ({children, className, onClick, style}) {
   return (
-    <li className='answer-option'><p>{children}</p></li>
+    <li style={style} className={`answer-option ${className || ''}`} onClick={onClick}>
+      <p>{children}</p>
+    </li>
   )
 }
 
