@@ -118,7 +118,7 @@ function App() {
         <div className="quiz-content">
           <h1>{count + 1}. {selectedQuestion[count].question}</h1>
 
-          <ul className="answer-options">
+          <ul className={`answer-options ${isAnswered ? 'disabled' : ''}`}>
             {selectedQuestion[count].options.map(
               (option, index) => {
                 let className = '';
@@ -135,6 +135,7 @@ function App() {
                   key={index}
                   className={className}
                   onClick={() => handleAnswerClick(option)}
+                  style={ isAnswered? { pointerEvents: 'none' } : {}}
                   >
                     {option}
                   </AnswerOption>
