@@ -131,6 +131,14 @@ function App() {
                   }
                 }
 
+                return <AnswerOption
+                  key={index}
+                  className={className}
+                  onClick={() => handleAnswerClick(option)}
+                  >
+                    {option}
+                  </AnswerOption>
+              }
             )}
 
           </ul>
