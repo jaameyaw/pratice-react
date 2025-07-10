@@ -149,7 +149,9 @@ function App() {
           <p className="question-status"><b>{count + 1}</b> of <b>{selectedQuestion.length}</b> Questions</p>
 
           <div className="nextButton">
-            <button onClick={changeQuestion}>Next</button>
+            <button onClick={changeQuestion}>Next
+              <span className='arrowIcon'><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
           </div>
         </div>
       </div>)}

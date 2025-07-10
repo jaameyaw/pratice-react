@@ -159,6 +159,10 @@
   transition: background 0.3s ease;
 }
 
+.arrowIcon i {
+  margin-left: 10px;
+}
+
 .result-container {
   text-align: center;
   padding: 40px;
