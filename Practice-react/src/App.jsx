@@ -89,6 +89,7 @@ function App() {
 
         <div className="start-quiz-wrapper">
           <button onClick={configButtonHandler} aria-label="Start the quiz">Start Quiz</button>
+          <div className = {!buttonContent? 'click-blocker': ''}></div>
         </div>
       </div>)}
 
@@ -124,7 +125,6 @@ function App() {
                   </AnswerOption>
               }
             )}
-
           </ul>
         </div>
 
@@ -135,6 +135,7 @@ function App() {
             <button onClick={changeQuestion}>Next
               <span className='arrowIcon'><i class="fa-solid fa-arrow-right"></i></span>
             </button>
+            <div className={!isAnswered ? 'click-blocker' : ''}></div>
           </div>
         </div>
       </div>)}
