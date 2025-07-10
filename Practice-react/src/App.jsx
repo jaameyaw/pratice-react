@@ -58,9 +58,7 @@ function App() {
   }
 
   function resetQuiz () {
-    const shuffledQuestions = [...Questions];
-    fisherYatesShuffle(shuffledQuestions);
-    setselectedQuestions(shuffledQuestions.slice(0, buttonContent));
+    fisherYatesShuffle(Questions);
     setisClicked(false)
     setIsQuizOver(false)
     setcount(0)
