@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { Questions } from './questions';
 import { GetResultMessage } from './resultsMessage';
 import { fisherYatesShuffle } from './questions';
+import QuestionOption from './components/QuestionOption';
+import AnswerOption from './components/AnswerOption';
+import Title from './components/Title';
 import QuizOver from '/src/assets/quiz-over.png';
 
 
