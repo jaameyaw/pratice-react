@@ -29,7 +29,7 @@ function App() {
   }
 
   function configButtonHandler () {
-   setisClicked(true)
+    setisClicked(true);
   }
 
   function changeQuestion () {
@@ -54,8 +54,7 @@ function App() {
         return prevCount + 1;
       }
       return prevCount;
-    }
-    );
+    });
   }
 
   function resetQuiz () {
