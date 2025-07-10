@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react';
 import { Questions } from './questions';
+import { GetResultMessage } from './resultsMessage';
 import { fisherYatesShuffle } from './questions';
 import QuizOver from '/src/assets/quiz-over.png';
 
@@ -140,7 +141,10 @@ function App() {
       (<div className="result-container fade-in">
           <img src={QuizOver} alt="congratulations emoji" className="result-img"/>
           <Title titleName='Quiz Completed!' />
-          <p className="result-message"><b>{answerCount}</b> out of <b>{selectedQuestion.length}</b></p>
+          <p className="result-message"><b>{answerCount}</b> out of <b>{selectedQuestion.length}</b>
+          {GetResultMessage(answerCount, selectedQuestion.length)}
+          </p>
+
           <button onClick={resetQuiz} className="try-again-btn" >Try Again</button>
       </div>)}
     </>
