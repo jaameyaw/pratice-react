@@ -7,27 +7,6 @@ import QuizOver from '/src/assets/quiz-over.png';
 
 fisherYatesShuffle(Questions);
 
-function QuestionOption ({children, isSelected, ...rest}) {
-  return (
-    <button className= {isSelected? 'active' : null}  {...rest}>{children}</button>
-  )
-}
-
-function Title ({titleName}) {
-  return (
-    <h2>{titleName}</h2>
-  )
-}
-
-function AnswerOption ({children, className, onClick, style}) {
-  return (
-    <li style={style} className={`answer-option ${className || ''}`} onClick={onClick}>
-      <p>{children}</p>
-    </li>
-  )
-}
-
-
 
 function App() {
   const [buttonContent, setbuttonContent] = useState()
