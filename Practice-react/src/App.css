@@ -162,7 +162,12 @@
   font-weight: 500;
 }
 
-.quiz-footer button, .try-again-btn {
+.nextButton {
+  position: relative;
+  display: inline-block;
+}
+
+.nextButton button, .try-again-btn {
   padding: 12px 19px;
   color: #fff;
   border: none;
