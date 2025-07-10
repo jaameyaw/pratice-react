@@ -63,7 +63,22 @@
 
 .start-quiz-wrapper {
   margin-top: 2rem;
+  position: relative;
+  display: inline-block;
 }
+
+.click-blocker {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: not-allowed;
+  z-index: 2;
+  background-color: transparent;
+  display: block;
+}
+
 
 .start-quiz-wrapper button{
   color: #fff;
