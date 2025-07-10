@@ -103,18 +103,22 @@ function App() {
             {selectedQuestion[count].options.map(
               (option, index) => {
                 let className = '';
+                let iconClass = '';
                 if (isAnswered) {
                   if (option === selectedQuestion[count].answer) {
                     className = 'correct'; 
+                    iconClass = 'fa-regular fa-circle-check';
                   }
                   else if (option === selectedAnswer) {
                     className = 'incorrect';
+                    iconClass = 'fa-regular fa-circle-xmark';
                   }
                 }
 
                 return <AnswerOption
                   key={index}
                   className={className}
+                  iconClassName={iconClass}
                   onClick={() => handleAnswerClick(option)}
                   style={ isAnswered? { pointerEvents: 'none' } : {}}
                   >
