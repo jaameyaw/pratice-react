@@ -14,7 +14,7 @@ const Questions = [
   {
     question: "What’s my love language?",
     options: ["Words of affirmation", "Quality time", "Acts of service", "Physical touch"],
-    answer: "Physical touch"
+    answer: "Words of affirmation"
   },
   {
     question: "What am I most likely doing on a Sunday afternoon?",
