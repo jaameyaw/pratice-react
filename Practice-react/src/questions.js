@@ -75,8 +75,21 @@ const Questions = [
     question: "What would I probably do on a Friday night?",
     options: ["Hang out with friends", "Stay home and code", "Watch movies", "Go for a walk"],
     answer: "Stay home and code"
+  },
+
+  {
+    question: "Which quote best describes me?",
+    options: ["Slow and steady wins the race", "Work hard in silence", "Live, laugh, love", "Do it afraid"],
+    answer: "Work hard in silence"
+  },
+
+  {
+    question: "What motivates me the most?",
+    options: ["Seeing progress", "Helping others", "Recognition", "Solving tough problems"],
+    answer: "Solving tough problems"
   }
 ]
+
 
 export function fisherYatesShuffle(questionsArr) {
 
