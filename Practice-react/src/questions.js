@@ -43,8 +43,8 @@ const Questions = [
   },
   {
     question: "What type of girls do I like?",
-    answer: "Slim ladies"
     options: ["Dark-skinned ladies", "Slim ladies", "Face card", "Quiet girls"],
+    answer: "Face card"
   },
   {
     question: "What subject did I enjoy the most in school?",
